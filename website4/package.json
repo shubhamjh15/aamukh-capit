@@ -2,6 +2,9 @@
   "name": "aamukh-capital",
   "version": "0.1.0",
   "description": "Aamukh Capital — the 1% Angel Collective. Conviction-driven capital for India's next generation of global founders.",
+  "author": "shubhamjh15",
+  "license": "MIT",
+  "keywords": ["angel-investing", "venture-capital", "india", "startup", "nextjs"],
   "private": true,
   "scripts": {
     "dev": "next dev",
