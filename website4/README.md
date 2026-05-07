@@ -22,3 +22,8 @@ Built in Bharat, for the world.
 - Flywheel model section with scroll animations
 - Fully responsive across all screen sizes
 - Optimized images via Next.js Image component
+
+## Prerequisites
+
+- Node.js 18+
+- npm 9+ or yarn 1.22+
