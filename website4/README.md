@@ -27,3 +27,22 @@ Built in Bharat, for the world.
 
 - Node.js 18+
 - npm 9+ or yarn 1.22+
+
+## Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/shubhamjh15/aamukh-capit.git
+cd aamukh-capit/website4
+
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp ../.env.example .env.local
+
+# Start development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
