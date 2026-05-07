@@ -16,7 +16,30 @@ npm install
 ## Development
 
 ```bash
+npm run dev       # start dev server on :3000
+npm run build     # production build
+npm run start     # serve production build
+npm run lint      # run eslint
+```
+
+## Environment Setup
+
+Copy the example env file and fill in your values:
+
+```bash
+cp ../.env.example .env.local
+```
+
+## Troubleshooting
+
+**Port already in use**
+```bash
+npx kill-port 3000
 npm run dev
 ```
 
-The app runs at http://localhost:3000
+**Type errors after install**
+```bash
+rm -rf .next
+npm run build
+```
