@@ -31,18 +31,19 @@ Built in Bharat, for the world.
 ## Getting Started
 
 ```bash
-# Clone the repository
 git clone https://github.com/shubhamjh15/aamukh-capit.git
 cd aamukh-capit/website4
-
-# Install dependencies
 npm install
-
-# Copy environment variables
 cp ../.env.example .env.local
-
-# Start development server
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Environment Variables
+
+| Variable | Description | Required |
+|---|---|---|
+| `NEXT_PUBLIC_APP_URL` | Base URL of the app | Yes |
+| `NEXT_PUBLIC_APP_NAME` | Display name | No |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics ID | No |
