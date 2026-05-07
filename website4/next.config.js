@@ -1,17 +1,15 @@
 /** @type {import('next').NextConfig} */
+
+// Next.js configuration for Aamukh Capital website
+// - Images: allow external domains for future CDN integration
+// - Strict mode enabled for better React hygiene
 const nextConfig = {
-  output: "export",
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  reactStrictMode: true,
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+    // Add external image domains here as needed
+    domains: [],
+    // Use modern image formats for better performance
+    formats: ["image/avif", "image/webp"],
   },
 };
 
