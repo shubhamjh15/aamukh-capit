@@ -61,3 +61,19 @@ website4/
 ├── constants/        # Static data & media refs
 └── public/           # Static assets
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
+
+## Deployment
+
+Deploy instantly on [Vercel](https://vercel.com/new):
+
+1. Connect your GitHub repository
+2. Set environment variables from `.env.example`
+3. Deploy — Vercel auto-detects Next.js
+
+## License
+
+MIT
