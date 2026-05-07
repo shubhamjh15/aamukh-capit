@@ -47,3 +47,17 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 | `NEXT_PUBLIC_APP_URL` | Base URL of the app | Yes |
 | `NEXT_PUBLIC_APP_NAME` | Display name | No |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics ID | No |
+
+## Project Structure
+
+```
+website4/
+├── app/              # Next.js app router
+│   ├── globals.css   # Global styles & animations
+│   ├── layout.tsx    # Root layout with fonts
+│   └── page.tsx      # Home page composition
+├── components/       # React components
+│   └── BentoCards/   # Bento grid card variants
+├── constants/        # Static data & media refs
+└── public/           # Static assets
+```
