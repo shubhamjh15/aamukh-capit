@@ -20,3 +20,11 @@ We follow Conventional Commits:
 - `docs:` — documentation only
 - `style:` — formatting, no logic change
 - `refactor:` — code restructure, no feature change
+
+## Code Style
+
+- Use TypeScript for all new components
+- Prefer named exports over default exports where possible
+- Keep components focused — one responsibility per file
+- Use Tailwind utility classes; avoid inline styles
+- Animate with Framer Motion for consistency
