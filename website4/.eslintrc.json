@@ -5,6 +5,8 @@
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "prefer-const": "error",
     "react/self-closing-comp": "warn",
-    "react/jsx-no-duplicate-props": "error"
+    "react/jsx-no-duplicate-props": "error",
+    "react/no-unknown-property": ["error", { "ignore": ["position", "rotation", "args"] }],
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 }
