@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 
 // Aamukh Capital — Tailwind CSS configuration
-// Primary brand color: #4C6BE8 (electric blue)
-// Background: white with subtle gradients
-// Typography: Inter Tight (sans) + Instrument Serif (editorial)
+// Brand: #4C6BE8 electric blue, #0A1128 deep navy
+// Fonts: Inter Tight (sans), Instrument Serif (editorial)
+// Animations: blur-reveal (globals.css), tw-animate-css plugin
 
 const config: Config = {
   content: [
@@ -18,16 +18,15 @@ const config: Config = {
         serif: ["var(--font-instrument-serif)", "serif"],
       },
       colors: {
-        // Brand colors
         brand: "#4C6BE8",
         "brand-dark": "#152873",
-        // Semantic text colors
         "text-primary": "#0A1128",
         "text-secondary": "#4A5568",
         "text-muted": "#9CA3AF",
-        // Border
         border: "#E5E7EB",
       },
+      // Responsive breakpoints follow Tailwind defaults:
+      // sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px
     },
   },
   plugins: [],
