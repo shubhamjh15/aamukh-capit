@@ -18,3 +18,18 @@ cd website4
 npm run build
 npm run start
 ```
+
+## Environment Variables on Vercel
+
+Add these in Project Settings → Environment Variables:
+
+| Key | Value |
+|---|---|
+| `NEXT_PUBLIC_APP_URL` | Your production URL |
+| `NEXT_PUBLIC_APP_NAME` | Aamukh Capital |
+
+## Custom Domain
+
+1. Go to Project → Domains in Vercel dashboard
+2. Add your domain and follow DNS instructions
+3. SSL is provisioned automatically
