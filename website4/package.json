@@ -4,7 +4,12 @@
   "description": "Aamukh Capital — the 1% Angel Collective. Conviction-driven capital for India's next generation of global founders.",
   "author": "shubhamjh15",
   "license": "MIT",
-  "keywords": ["angel-investing", "venture-capital", "india", "startup", "nextjs"],
+  "keywords": ["angel-investing", "venture-capital", "india", "startup", "nextjs", "react"],
+  "homepage": "https://github.com/shubhamjh15/aamukh-capit#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shubhamjh15/aamukh-capit.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
