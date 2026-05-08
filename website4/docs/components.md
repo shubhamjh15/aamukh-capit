@@ -21,3 +21,14 @@ All components live in `website4/components/`.
 | `TeamExpertiseSection` | Team profiles and expertise |
 | `CallToActionSection` | Final CTA to apply |
 | `FooterSection` | Site footer with links |
+
+## HeroSection
+
+The hero is the first visual impression. It uses:
+
+- `clamp()` font sizing for responsive typography
+- `blur-reveal` CSS animation (defined in `globals.css`)
+- Framer Motion for badge and body entrance
+- Background image with white overlay and bottom gradient fade
+
+Typography: Inter Tight (uppercase, extrabold) + Instrument Serif (editorial italic).
