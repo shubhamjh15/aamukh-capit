@@ -2,33 +2,38 @@
 
 All components live in `website4/components/`.
 
-## Page Sections (in render order)
+## Page Sections (render order)
 
 | Component | Description |
 |---|---|
 | `NavigationSection` | Sticky top nav with logo and CTA |
 | `HeroSection` | Full-viewport hero with animated heading |
-| `MarqueeSection` | Auto-scrolling ticker of portfolio names |
-| `BentoGrid` | 5-card bento layout for key stats |
+| `MarqueeSection` | Auto-scrolling portfolio ticker |
+| `BentoGrid` | 5-card bento layout |
 | `InteractiveDualModel` | 3D dual-panel interactive model |
 | `MarketVisionSection` | Market opportunity with data viz |
 | `ValuePropositionSection` | Three-column value props |
-| `CorePhilosophySection` | Investment philosophy breakdown |
+| `CorePhilosophySection` | Investment philosophy |
 | `FlywheelModelSection` | Animated flywheel diagram |
-| `InvestmentProgramsSection` | Program tiers and details |
-| `FundStructureSection` | Fund structure overview |
-| `PipelineShowcaseSection` | Deal pipeline visualization |
-| `TeamExpertiseSection` | Team profiles and expertise |
-| `CallToActionSection` | Final CTA to apply |
-| `FooterSection` | Site footer with links |
+| `InvestmentProgramsSection` | Program tiers |
+| `FundStructureSection` | Fund structure |
+| `PipelineShowcaseSection` | Deal pipeline |
+| `TeamExpertiseSection` | Team profiles |
+| `CallToActionSection` | Apply CTA |
+| `FooterSection` | Footer with links |
 
 ## HeroSection
 
-The hero is the first visual impression. It uses:
+Full-viewport section using `min-h-[100svh]` (small viewport height unit for mobile).
 
-- `clamp()` font sizing for responsive typography
-- `blur-reveal` CSS animation (defined in `globals.css`)
-- Framer Motion for badge and body entrance
-- Background image with white overlay and bottom gradient fade
+Typography uses `clamp(2.6rem, 6.5vw, 7rem)` — scales smoothly from mobile to 4K.
 
-Typography: Inter Tight (uppercase, extrabold) + Instrument Serif (editorial italic).
+Entrance: `blur-reveal` CSS animation with staggered `animation-delay` per line.
+
+## NavigationSection
+
+Sticky navigation with `position: sticky; top: 0`. Uses `backdrop-blur` for the frosted glass effect. CTA button links to `#apply`.
+
+## MarqueeSection
+
+CSS marquee using `animation: marquee linear infinite`. Items duplicate to create seamless loop. Pauses on hover via `animation-play-state: paused`.
