@@ -2,14 +2,27 @@
 
 ## Tech Decisions
 
-### Next.js 13 (Pages Router compatible)
-We use Next.js 13 but keep the app in `app/` directory with a single page.tsx that composes all section components top-to-bottom.
+### Next.js 13 (App Router)
+Single `page.tsx` composes all section components top-to-bottom. No routing needed — this is a one-page marketing site.
 
 ### Component Architecture
-Each page section is a self-contained component. No shared state between sections — each fetches/owns its own data. This keeps sections easy to reorder or remove.
+Each section is fully self-contained. No shared state between sections. Easy to reorder, remove, or A/B test sections independently.
 
 ### Animation Strategy
-- **Entrance animations** — Framer Motion (`initial`/`animate` with `viewport`)
-- **Scroll-linked** — GSAP ScrollTrigger for complex timeline animations
-- **CSS animations** — `blur-reveal` keyframe in `globals.css` for performance-critical text
-- **3D** — React Three Fiber for the `InteractiveDualModel` section
+- **Entrance animations** — Framer Motion `viewport` trigger
+- **Scroll-linked** — GSAP ScrollTrigger for timeline animations
+- **CSS keyframes** — `blur-reveal` in `globals.css` for text (avoids JS overhead)
+- **3D** — React Three Fiber for `InteractiveDualModel`
+
+### Styling
+Tailwind CSS with a custom design token layer in `tailwind.config.ts`. All color/font values are centralized there — no magic values in components.
+
+## Data Flow
+
+All content is static — no API calls, no CMS. Content lives directly in component files. For future CMS integration, extract content into `constants/` and fetch at build time.
+
+## Performance Notes
+
+- Next.js Image for all `<img>` tags (lazy load + WebP/AVIF)
+- Inter Tight and Instrument Serif loaded via `next/font` (zero layout shift)
+- `blur-reveal` uses CSS `will-change: transform, opacity` for GPU compositing
