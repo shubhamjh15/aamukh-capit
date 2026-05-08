@@ -15,18 +15,17 @@ Built in Bharat, for the world.
 
 ## Features
 
-- Animated hero section with blur-reveal text effects
-- Interactive dual model visualization
+- Animated hero with blur-reveal text effects
+- Interactive 3D dual model visualization
 - Bento grid portfolio showcase
 - Marquee ticker with portfolio companies
-- Flywheel model section with scroll animations
+- Flywheel model with scroll animations
 - Fully responsive across all screen sizes
-- Optimized images via Next.js Image component
 
 ## Prerequisites
 
 - Node.js 18+
-- npm 9+ or yarn 1.22+
+- npm 9+
 
 ## Getting Started
 
@@ -53,26 +52,27 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 ```
 website4/
 ├── app/              # Next.js app router
-│   ├── globals.css   # Global styles & animations
-│   ├── layout.tsx    # Root layout with fonts
-│   └── page.tsx      # Home page composition
-├── components/       # React components
-│   └── BentoCards/   # Bento grid card variants
-├── constants/        # Static data & media refs
+├── components/       # Page section components
+│   └── BentoCards/   # Bento grid cards
+├── constants/        # Static data
+├── docs/             # Project documentation
 └── public/           # Static assets
 ```
 
+## Documentation
+
+- [Setup Guide](docs/setup.md)
+- [Component Reference](docs/components.md)
+- [Architecture](docs/architecture.md)
+- [Deployment](docs/deployment.md)
+
 ## Contributing
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Deployment
 
-Deploy instantly on [Vercel](https://vercel.com/new):
-
-1. Connect your GitHub repository
-2. Set environment variables from `.env.example`
-3. Deploy — Vercel auto-detects Next.js
+Deploy on [Vercel](https://vercel.com/new) — set root directory to `website4`.
 
 ## License
 
