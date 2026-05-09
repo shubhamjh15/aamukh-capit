@@ -24,10 +24,9 @@ npm run lint      # run eslint
 
 ## Environment Setup
 
-Copy the example env file and fill in your values:
-
 ```bash
 cp ../.env.example .env.local
+# edit .env.local with your values
 ```
 
 ## Troubleshooting
@@ -43,3 +42,13 @@ npm run dev
 rm -rf .next
 npm run build
 ```
+
+**Three.js peer dependency warnings**
+These are safe to ignore — `@react-three/fiber` and `@react-three/drei` are pinned to compatible versions.
+
+## Dev Workflow
+
+1. Create a branch: `git checkout -b feat/section-name`
+2. Make changes, run `npm run dev` to preview
+3. Run `npm run lint` before committing
+4. Open a PR against `master`
