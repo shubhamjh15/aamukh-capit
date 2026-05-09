@@ -66,6 +66,13 @@ website4/
 - [Architecture](docs/architecture.md)
 - [Deployment](docs/deployment.md)
 
+## Performance
+
+- Next.js Image for all images (WebP/AVIF, lazy load)
+- Fonts via `next/font` (zero layout shift)
+- GPU-composited CSS animations for text effects
+- Bundle size optimized via Next.js tree shaking
+
 ## Contributing
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md).
