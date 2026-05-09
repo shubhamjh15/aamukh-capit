@@ -68,10 +68,18 @@ website4/
 
 ## Performance
 
-- Next.js Image for all images (WebP/AVIF, lazy load)
+- Next.js Image (WebP/AVIF, lazy load)
 - Fonts via `next/font` (zero layout shift)
-- GPU-composited CSS animations for text effects
-- Bundle size optimized via Next.js tree shaking
+- GPU-composited CSS animations
+- Tree-shaken bundles via Next.js
+
+## Roadmap
+
+- [ ] CMS integration for portfolio content
+- [ ] Application form backend
+- [ ] Blog / thesis section
+- [ ] Dark mode support
+- [ ] i18n (Hindi language support)
 
 ## Contributing
 
