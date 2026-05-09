@@ -24,16 +24,25 @@ All components live in `website4/components/`.
 
 ## HeroSection
 
-Full-viewport section using `min-h-[100svh]` (small viewport height unit for mobile).
-
-Typography uses `clamp(2.6rem, 6.5vw, 7rem)` — scales smoothly from mobile to 4K.
-
-Entrance: `blur-reveal` CSS animation with staggered `animation-delay` per line.
+Full-viewport using `min-h-[100svh]`. Typography: `clamp(2.6rem, 6.5vw, 7rem)`.
+Entrance: `blur-reveal` CSS animation staggered per line. Background: `bg.jpeg` with white overlay and `bg-gradient-to-t` bottom fade.
 
 ## NavigationSection
 
-Sticky navigation with `position: sticky; top: 0`. Uses `backdrop-blur` for the frosted glass effect. CTA button links to `#apply`.
+Sticky with `backdrop-blur` frosted glass. CTA links to `#apply`.
 
 ## MarqueeSection
 
-CSS marquee using `animation: marquee linear infinite`. Items duplicate to create seamless loop. Pauses on hover via `animation-play-state: paused`.
+CSS `animation: marquee linear infinite`. Items duplicate for seamless loop. Pauses on hover.
+
+## BentoGrid
+
+Uses CSS Grid with `grid-template-areas` for the 5-card asymmetric layout. Each card is a separate component in `BentoCards/`.
+
+## InteractiveDualModel
+
+React Three Fiber canvas. Two panels toggle on click. Uses `@react-three/drei` for orbit controls and environment lighting.
+
+## FlywheelModelSection
+
+GSAP ScrollTrigger timeline. Nodes animate in sequence as user scrolls. SVG paths drawn with `stroke-dashoffset` technique.
