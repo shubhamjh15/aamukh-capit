@@ -1,9 +1,18 @@
 import type { Config } from "tailwindcss";
 
 // Aamukh Capital — Tailwind CSS configuration
-// Brand: #4C6BE8 electric blue, #0A1128 deep navy
-// Fonts: Inter Tight (sans), Instrument Serif (editorial)
-// Animations: blur-reveal (globals.css), tw-animate-css plugin
+//
+// Brand palette:
+//   #4C6BE8  electric blue (primary CTA, accents)
+//   #0A1128  deep navy (primary text, buttons)
+//   #152873  dark blue (hover state for buttons)
+//
+// Fonts (loaded via next/font in layout.tsx):
+//   Inter Tight → var(--font-inter-tight)  [sans]
+//   Instrument Serif → var(--font-instrument-serif)  [serif]
+//
+// Custom animations live in globals.css:
+//   blur-reveal — opacity + blur + translateY entrance
 
 const config: Config = {
   content: [
@@ -25,8 +34,6 @@ const config: Config = {
         "text-muted": "#9CA3AF",
         border: "#E5E7EB",
       },
-      // Responsive breakpoints follow Tailwind defaults:
-      // sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px
     },
   },
   plugins: [],
