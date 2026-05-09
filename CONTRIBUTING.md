@@ -21,15 +21,23 @@ Thanks for your interest in contributing!
 
 ## Code Style
 
-- Use TypeScript for all new components
-- Prefer named exports where possible
-- Keep components single-responsibility
-- Use Tailwind utility classes; avoid inline styles
-- Animate with Framer Motion for consistency
+- TypeScript for all new components
+- Named exports preferred over default
+- Single-responsibility components
+- Tailwind utility classes only (no inline styles)
+- Framer Motion for all JS-driven animations
 
 ## Pull Request Guidelines
 
-- Keep PRs focused — one feature or fix per PR
-- Add a clear description of what changed and why
-- Reference any related issues with `Closes #123`
-- Ensure `npm run lint` passes before opening a PR
+- One feature or fix per PR
+- Clear description of what changed and why
+- Reference issues with `Closes #123`
+- Ensure `npm run lint` passes
+
+## Reporting Issues
+
+Use the [issue templates](.github/ISSUE_TEMPLATE/) for:
+- Bug reports
+- Feature requests
+
+Include browser, OS, and screen size for visual bugs.
