@@ -3,26 +3,31 @@
 ## Tech Decisions
 
 ### Next.js 13 (App Router)
-Single `page.tsx` composes all section components top-to-bottom. No routing needed — this is a one-page marketing site.
+Single `page.tsx` composes all section components. No routing — one-page marketing site.
 
 ### Component Architecture
-Each section is fully self-contained. No shared state between sections. Easy to reorder, remove, or A/B test sections independently.
+Self-contained sections. No shared state. Easy to reorder or A/B test independently.
 
 ### Animation Strategy
-- **Entrance animations** — Framer Motion `viewport` trigger
-- **Scroll-linked** — GSAP ScrollTrigger for timeline animations
-- **CSS keyframes** — `blur-reveal` in `globals.css` for text (avoids JS overhead)
+- **Entrance** — Framer Motion `viewport` trigger
+- **Scroll-linked** — GSAP ScrollTrigger timelines
+- **CSS keyframes** — `blur-reveal` in `globals.css` (GPU composited, avoids JS)
 - **3D** — React Three Fiber for `InteractiveDualModel`
 
 ### Styling
-Tailwind CSS with a custom design token layer in `tailwind.config.ts`. All color/font values are centralized there — no magic values in components.
+Tailwind CSS with design tokens in `tailwind.config.ts`. No magic values in components.
 
 ## Data Flow
 
-All content is static — no API calls, no CMS. Content lives directly in component files. For future CMS integration, extract content into `constants/` and fetch at build time.
+All content is static — no API calls, no CMS. For CMS integration: extract content to `constants/`, fetch at build time with `generateStaticParams`.
 
 ## Performance Notes
 
-- Next.js Image for all `<img>` tags (lazy load + WebP/AVIF)
-- Inter Tight and Instrument Serif loaded via `next/font` (zero layout shift)
-- `blur-reveal` uses CSS `will-change: transform, opacity` for GPU compositing
+- `next/image` for all images (WebP/AVIF, lazy load, prevents CLS)
+- `next/font` for Inter Tight + Instrument Serif (zero layout shift)
+- `blur-reveal` uses `will-change: transform, opacity` for GPU layer
+- Three.js canvas deferred until visible with `IntersectionObserver`
+
+## Bundle Considerations
+
+Three.js is the largest dependency (~600KB gzipped). It's only used in `InteractiveDualModel` — consider dynamic import with `next/dynamic` and `ssr: false` if initial load performance becomes a concern.
