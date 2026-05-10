@@ -24,8 +24,8 @@ Built in Bharat, for the world.
 
 ## Prerequisites
 
-- Node.js 18+
-- npm 9+
+- Node.js >= 18
+- npm >= 9
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 │   ├── components/   # Page section components
 │   │   └── BentoCards/
 │   ├── constants/    # Static data
-│   ├── docs/         # Project documentation
+│   ├── docs/         # Documentation
 │   └── public/       # Static assets
 ├── .editorconfig
 ├── .env.example
@@ -74,18 +74,18 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## Performance
 
-- Next.js Image (WebP/AVIF, lazy load)
+- Next.js Image (WebP/AVIF, lazy load, zero CLS)
 - Fonts via `next/font` (zero layout shift)
-- GPU-composited CSS animations
-- Three.js dynamically importable
+- GPU-composited blur-reveal animations
+- Three.js dynamically importable for faster initial load
 
 ## Roadmap
 
-- [ ] CMS integration for portfolio content
-- [ ] Application form backend
-- [ ] Blog / thesis section
-- [ ] Dark mode support
-- [ ] i18n (Hindi)
+- [ ] CMS integration (Sanity or Contentful)
+- [ ] Application form with backend
+- [ ] Blog / investment thesis section
+- [ ] Dark mode
+- [ ] Hindi language support
 
 ## Contributing
 
@@ -93,7 +93,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Deployment
 
-Deploy on [Vercel](https://vercel.com/new) — set root directory to `website4`.
+One-click deploy on [Vercel](https://vercel.com/new) — set root directory to `website4`.
+See [deployment guide](website4/docs/deployment.md) for full details.
 
 ## License
 
