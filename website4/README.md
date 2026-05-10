@@ -46,32 +46,38 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 | `NEXT_PUBLIC_APP_URL` | Base URL of the app | Yes |
 | `NEXT_PUBLIC_APP_NAME` | Display name | No |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics ID | No |
+| `NEXT_PUBLIC_ENABLE_3D` | Enable 3D section | No |
 
 ## Project Structure
 
 ```
-website4/
-├── app/              # Next.js app router
-├── components/       # Page section components
-│   └── BentoCards/   # Bento grid cards
-├── constants/        # Static data
-├── docs/             # Project documentation
-└── public/           # Static assets
+├── .github/          # PR and issue templates
+├── website4/
+│   ├── app/          # Next.js app router
+│   ├── components/   # Page section components
+│   │   └── BentoCards/
+│   ├── constants/    # Static data
+│   ├── docs/         # Project documentation
+│   └── public/       # Static assets
+├── .editorconfig
+├── .env.example
+├── .prettierrc
+└── CONTRIBUTING.md
 ```
 
 ## Documentation
 
-- [Setup Guide](docs/setup.md)
-- [Component Reference](docs/components.md)
-- [Architecture](docs/architecture.md)
-- [Deployment](docs/deployment.md)
+- [Setup Guide](website4/docs/setup.md)
+- [Component Reference](website4/docs/components.md)
+- [Architecture](website4/docs/architecture.md)
+- [Deployment](website4/docs/deployment.md)
 
 ## Performance
 
 - Next.js Image (WebP/AVIF, lazy load)
 - Fonts via `next/font` (zero layout shift)
 - GPU-composited CSS animations
-- Tree-shaken bundles via Next.js
+- Three.js dynamically importable
 
 ## Roadmap
 
@@ -79,11 +85,11 @@ website4/
 - [ ] Application form backend
 - [ ] Blog / thesis section
 - [ ] Dark mode support
-- [ ] i18n (Hindi language support)
+- [ ] i18n (Hindi)
 
 ## Contributing
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Deployment
 
@@ -91,4 +97,4 @@ Deploy on [Vercel](https://vercel.com/new) — set root directory to `website4`.
 
 ## License
 
-MIT
+MIT © shubhamjh15
