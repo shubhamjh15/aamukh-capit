@@ -13,42 +13,41 @@ cd aamukh-capit/website4
 npm install
 ```
 
-## Development
+## Development Scripts
 
 ```bash
-npm run dev       # start dev server on :3000
-npm run build     # production build
-npm run start     # serve production build
-npm run lint      # run eslint
+npm run dev       # dev server on :3000 (HMR enabled)
+npm run build     # production build to .next/
+npm run start     # serve .next/ on :3000
+npm run lint      # eslint check
 ```
 
 ## Environment Setup
 
 ```bash
 cp ../.env.example .env.local
-# edit .env.local with your values
+# Fill in NEXT_PUBLIC_APP_URL at minimum
 ```
 
 ## Troubleshooting
 
-**Port already in use**
+**Port in use:**
 ```bash
-npx kill-port 3000
-npm run dev
+npx kill-port 3000 && npm run dev
 ```
 
-**Type errors after install**
+**Type errors after install:**
 ```bash
-rm -rf .next
-npm run build
+rm -rf .next && npm run build
 ```
 
-**Three.js peer dependency warnings**
-These are safe to ignore — `@react-three/fiber` and `@react-three/drei` are pinned to compatible versions.
+**Three.js peer warnings:** Safe to ignore — versions are pinned.
+
+**Framer Motion hydration warning:** Expected in dev with `reactStrictMode: true`. Not present in production build.
 
 ## Dev Workflow
 
-1. Create a branch: `git checkout -b feat/section-name`
-2. Make changes, run `npm run dev` to preview
-3. Run `npm run lint` before committing
-4. Open a PR against `master`
+1. Branch: `git checkout -b feat/section-name`
+2. Dev: `npm run dev`
+3. Lint: `npm run lint`
+4. PR against `master`
