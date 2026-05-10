@@ -7,7 +7,7 @@ Thanks for your interest in contributing!
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feat/your-feature`
 3. Make your changes
-4. Commit using Conventional Commits format
+4. Commit with Conventional Commits
 5. Open a Pull Request
 
 ## Commit Convention
@@ -16,28 +16,30 @@ Thanks for your interest in contributing!
 - `fix:` — bug fix
 - `chore:` — config/tooling
 - `docs:` — documentation only
-- `style:` — formatting, no logic change
+- `style:` — formatting, no logic
 - `refactor:` — restructure, no feature change
 
 ## Code Style
 
-- TypeScript for all new components
-- Named exports preferred over default
+- TypeScript for all new files
+- Named exports preferred
 - Single-responsibility components
-- Tailwind utility classes only (no inline styles)
-- Framer Motion for all JS-driven animations
+- Tailwind only (no inline styles)
+- Framer Motion for all animations
 
 ## Pull Request Guidelines
 
-- One feature or fix per PR
-- Clear description of what changed and why
+- One feature per PR
+- Clear description of changes and motivation
+- `npm run lint` must pass
 - Reference issues with `Closes #123`
-- Ensure `npm run lint` passes
 
 ## Reporting Issues
 
-Use the [issue templates](.github/ISSUE_TEMPLATE/) for:
-- Bug reports
-- Feature requests
+Use [issue templates](.github/ISSUE_TEMPLATE/):
+- Bug reports: include browser, OS, screen size
+- Feature requests: explain motivation first
 
-Include browser, OS, and screen size for visual bugs.
+## Code of Conduct
+
+Be respectful. Constructive feedback only.
