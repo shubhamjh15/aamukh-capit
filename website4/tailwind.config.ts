@@ -3,16 +3,18 @@ import type { Config } from "tailwindcss";
 // Aamukh Capital — Tailwind CSS configuration
 //
 // Brand palette:
-//   #4C6BE8  electric blue (primary CTA, accents)
-//   #0A1128  deep navy (primary text, buttons)
-//   #152873  dark blue (hover state for buttons)
+//   #4C6BE8  electric blue  → brand CTA, links, accents
+//   #0A1128  deep navy      → primary text and dark buttons
+//   #152873  dark blue      → button hover state
+//   white                  → backgrounds, card surfaces
 //
-// Fonts (loaded via next/font in layout.tsx):
-//   Inter Tight → var(--font-inter-tight)  [sans]
-//   Instrument Serif → var(--font-instrument-serif)  [serif]
+// Typography (via next/font in layout.tsx):
+//   Inter Tight → var(--font-inter-tight)        [font-sans]
+//   Instrument Serif → var(--font-instrument-serif) [font-serif / editorial-italic]
 //
-// Custom animations live in globals.css:
-//   blur-reveal — opacity + blur + translateY entrance
+// Animations (in globals.css):
+//   .blur-reveal  entrance: opacity + blur + translateY
+//   .marquee      infinite horizontal scroll
 
 const config: Config = {
   content: [
