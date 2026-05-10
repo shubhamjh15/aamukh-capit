@@ -6,7 +6,8 @@
     "prefer-const": "error",
     "react/self-closing-comp": "warn",
     "react/jsx-no-duplicate-props": "error",
-    "react/no-unknown-property": ["error", { "ignore": ["position", "rotation", "args"] }],
-    "@typescript-eslint/no-explicit-any": "warn"
+    "react/no-unknown-property": ["error", { "ignore": ["position", "rotation", "args", "intensity", "castShadow"] }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "import/no-anonymous-default-export": "off"
   }
 }
